@@ -1,5 +1,0 @@
-import "dotenv/config";
-
-const URI = ``
-
-export {URI}
