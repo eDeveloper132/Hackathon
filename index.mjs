@@ -47,7 +47,7 @@ app.post("/webhook", async (req, res) => {
     try {
         const body = req.body
         const intent = body?.queryResult?.intent.displayName
-
+        let dialogflow_response;
         if (intent === "Receiver_yes") {
             const PhoneNumber = body?.queryResult.parameters.number
             const Name = body?.queryResult.parameters.person?.name
@@ -59,8 +59,19 @@ app.post("/webhook", async (req, res) => {
                 dataSaver.push(Name);
                 dataSaver.push(Email);
                 dataSaver.push(PhoneNumber);
+                dialogflow_response = {
+                    "fulfillmentMessages": [
+                        {
+                            "text": {
+                                "text": [
+                                    `Your Name ${Name} Your Email ${Email} Your PhoneNumber ${PhoneNumber}  has been submitted we contact you soon for booking ...`
+                                ]
+                            }
+                        }
+                    ]
+                }
                 await main();
-                res.sendStatus(200);
+                res.send(dialogflow_response);
             } else {
                 console.log("Missing Required Params");
                 res.status(400).send(
