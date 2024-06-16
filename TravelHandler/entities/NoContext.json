@@ -1,0 +1,9 @@
+{
+  "id": "cc5814f7-211f-42ab-8328-3d461e0de966",
+  "name": "NoContext",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

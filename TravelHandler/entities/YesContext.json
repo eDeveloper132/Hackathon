@@ -1,0 +1,9 @@
+{
+  "id": "96940173-a8f7-4f51-b42c-adbf883bb28a",
+  "name": "YesContext",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

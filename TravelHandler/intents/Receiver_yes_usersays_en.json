@@ -1,0 +1,96 @@
+[
+  {
+    "id": "c9df152b-6828-4892-9613-ff591427b0eb",
+    "data": [
+      {
+        "text": "yes",
+        "meta": "@YesContext",
+        "alias": "YesContext",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "6a3d1f6a-96b3-46df-8ec7-ac28c41da220",
+    "data": [
+      {
+        "text": "Ilyas",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "cbe1d281-5dfc-4536-8d0c-c52b14bc3539",
+    "data": [
+      {
+        "text": "+",
+        "userDefined": false
+      },
+      {
+        "text": "923476350136",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "aae03068-fd0e-4b17-9480-1b7623adfea5",
+    "data": [
+      {
+        "text": "mohammadilyassilat0@gmail.com",
+        "meta": "@sys.email",
+        "alias": "email",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "96f2c841-9fb0-407c-aacb-0b3bdc70e945",
+    "data": [
+      {
+        "text": "1375219.aptechiic@gmail.com",
+        "meta": "@sys.email",
+        "alias": "email",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "778d630e-eb37-480b-9e8e-58e36d91cd0e",
+    "data": [
+      {
+        "text": "03212921053",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

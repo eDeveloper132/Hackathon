@@ -1,0 +1,52 @@
+{
+  "id": "955f3233-0e68-4567-9fd1-15bd7730222e",
+  "name": "Reciever_no",
+  "auto": true,
+  "contexts": [
+    "Receiver-no"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "8f2fc76c-3acb-4e50-943f-86ced154a128",
+          "name": "nocontext",
+          "required": false,
+          "dataType": "@NoContext",
+          "value": "$nocontext",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Thanks for using our services goodbye"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
