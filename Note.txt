@@ -1,0 +1,10 @@
+Salam,
+    'TravelHandler.zip' is a DialogFlow agent export file you can import it.
+
+    'dialogResponse.json' is a file that contains dialogflow response from the web.
+
+    'Hackathon chatbot (1).json' is a Flowise chatbot export file you can import it.
+
+    'mongodbcompass.Flowise.hackathon.json' is a MongoDB collection json for Flowise.
+
+    'mongodbcompass.DialogFlow.hackathons.json' is a MongoDB collection json for DialogFlow.
