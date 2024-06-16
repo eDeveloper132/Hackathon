@@ -1,0 +1,88 @@
+[{
+  "_id": {
+    "$oid": "666cc01a5c32e7be00f5bd77"
+  },
+  "sessionId": "e3a59ed4-8b93-48b6-aaeb-f0592d0e4504",
+  "messages": [
+    {
+      "type": "human",
+      "data": {
+        "content": "what is zeb",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "Zeb Travels is a travel agency that was established 50 years ago in Karachi, Pakistan. It is one of the oldest and well-known travel and tourism companies in Pakistan. The CEO of Zeb Travels is Khawaja Jahan Zeb. The company specializes in organizing tours tailored to the specific interests, needs, and requirements of clients, both inbound and outbound. It has multiple offices located in Karachi, Lahore, Islamabad, Hunza, and Skardu. The company has a team of professionals dedicated to providing high-quality customer service at competitive prices.",
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "666f00575c32e7be00d9a893"
+  },
+  "sessionId": "1b322d3e-53bd-47a8-a504-01fd33990682",
+  "messages": [
+    {
+      "type": "human",
+      "data": {
+        "content": "hi",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "Hello! How can I assist you today?",
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "I want to book travel",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "Sure, I can help with that. Could you please provide me with your name, email, residential address, and phone number to proceed with the booking?",
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    },
+    {
+      "type": "human",
+      "data": {
+        "content": "Ilyas , mohammadilyassilat0@gmail.com , Karachi , 03212921053",
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    },
+    {
+      "type": "ai",
+      "data": {
+        "content": "Thank you for providing the information. Your travel is booked. Goodbye!",
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "additional_kwargs": {},
+        "response_metadata": {}
+      }
+    }
+  ]
+}]

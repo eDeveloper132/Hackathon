@@ -70,8 +70,8 @@ app.post("/webhook", async (req, res) => {
                         }
                     ]
                 }
-                await main();
                 res.send(dialogflow_response);
+                await main();
             } else {
                 console.log("Missing Required Params");
                 res.status(400).send(
