@@ -46,6 +46,7 @@ app.get("/",(req,res)=>
 app.post("/webhook", async (req, res) => {
     try {
         const body = req.body
+        // console.log(body);
         const intent = body?.queryResult?.intent.displayName
         let dialogflow_response;
         if (intent === "Receiver_yes") {

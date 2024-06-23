@@ -15,6 +15,10 @@
         {
           "name": "Receiver-yes",
           "lifespan": 1
+        },
+        {
+          "name": "Receiver-info",
+          "lifespan": 1
         }
       ],
       "parameters": [],
@@ -25,7 +29,9 @@
           "textToSpeech": "",
           "lang": "en",
           "speech": [
-            "booking travel enter yes or no"
+            "Welcome to zeb travel! If you like to travel enter yes otherwise no if you like to information than enter info",
+            "Welcome to zeb travel! you want to book a tour enter yes or no if you like to information than enter info",
+            "Welcome to zeb travel! If you like to migrate enter yes or no if you like to information than enter info"
           ],
           "condition": ""
         }

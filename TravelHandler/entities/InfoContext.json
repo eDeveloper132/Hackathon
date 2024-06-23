@@ -1,0 +1,9 @@
+{
+  "id": "d60d56e3-8cbb-4569-9388-bf76252c8f69",
+  "name": "InfoContext",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

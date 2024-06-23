@@ -3,8 +3,8 @@
     {
       "id": "openAIEmbeddings_0",
       "position": {
-        "x": 309.25247999999993,
-        "y": 152.18920000000003
+        "x": -864.6793476869534,
+        "y": 522.7686005876521
       },
       "type": "customNode",
       "data": {
@@ -103,16 +103,16 @@
       "height": 423,
       "selected": false,
       "positionAbsolute": {
-        "x": 309.25247999999993,
-        "y": 152.18920000000003
+        "x": -864.6793476869534,
+        "y": 522.7686005876521
       },
       "dragging": false
     },
     {
       "id": "chatOpenAI_0",
       "position": {
-        "x": 688.6349275259994,
-        "y": 92.54894306269273
+        "x": -87.28577324261897,
+        "y": -333.48415952646326
       },
       "type": "customNode",
       "data": {
@@ -290,130 +290,16 @@
       "height": 669,
       "selected": false,
       "positionAbsolute": {
-        "x": 688.6349275259994,
-        "y": 92.54894306269273
-      },
-      "dragging": false
-    },
-    {
-      "id": "conversationalRetrievalQAChain_0",
-      "position": {
-        "x": 1120.2524799999999,
-        "y": 60.38919999999996
-      },
-      "type": "customNode",
-      "data": {
-        "id": "conversationalRetrievalQAChain_0",
-        "label": "Conversational Retrieval QA Chain",
-        "version": 3,
-        "name": "conversationalRetrievalQAChain",
-        "type": "ConversationalRetrievalQAChain",
-        "baseClasses": [
-          "ConversationalRetrievalQAChain",
-          "BaseChain",
-          "Runnable"
-        ],
-        "category": "Chains",
-        "description": "Document QA - built on RetrievalQAChain to provide a chat history component",
-        "inputParams": [
-          {
-            "label": "Return Source Documents",
-            "name": "returnSourceDocuments",
-            "type": "boolean",
-            "optional": true,
-            "id": "conversationalRetrievalQAChain_0-input-returnSourceDocuments-boolean"
-          },
-          {
-            "label": "Rephrase Prompt",
-            "name": "rephrasePrompt",
-            "type": "string",
-            "description": "Using previous chat history, rephrase question into a standalone question",
-            "warning": "Prompt must include input variables: {chat_history} and {question}",
-            "rows": 4,
-            "additionalParams": true,
-            "optional": true,
-            "default": "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {question}\nStandalone Question:",
-            "id": "conversationalRetrievalQAChain_0-input-rephrasePrompt-string"
-          },
-          {
-            "label": "Response Prompt",
-            "name": "responsePrompt",
-            "type": "string",
-            "description": "Taking the rephrased question, search for answer from the provided context",
-            "warning": "Prompt must include input variable: {context}",
-            "rows": 4,
-            "additionalParams": true,
-            "optional": true,
-            "default": "I want you to act as a document that I am having a conversation with. Your name is \"AI Assistant\". Using the provided context, answer the user's question to the best of your ability using the resources provided.\nIf there is nothing in the context relevant to the question at hand, just say \"Hmm, I'm not sure\" and stop after that. Refuse to answer any question not about the info. Never break character.\n------------\n{context}\n------------\nREMEMBER: If there is no relevant information within the context, just say \"Hmm, I'm not sure\". Don't try to make up an answer. Never break character.",
-            "id": "conversationalRetrievalQAChain_0-input-responsePrompt-string"
-          }
-        ],
-        "inputAnchors": [
-          {
-            "label": "Chat Model",
-            "name": "model",
-            "type": "BaseChatModel",
-            "id": "conversationalRetrievalQAChain_0-input-model-BaseChatModel"
-          },
-          {
-            "label": "Vector Store Retriever",
-            "name": "vectorStoreRetriever",
-            "type": "BaseRetriever",
-            "id": "conversationalRetrievalQAChain_0-input-vectorStoreRetriever-BaseRetriever"
-          },
-          {
-            "label": "Memory",
-            "name": "memory",
-            "type": "BaseMemory",
-            "optional": true,
-            "description": "If left empty, a default BufferMemory will be used",
-            "id": "conversationalRetrievalQAChain_0-input-memory-BaseMemory"
-          },
-          {
-            "label": "Input Moderation",
-            "description": "Detect text that could generate harmful output and prevent it from being sent to the language model",
-            "name": "inputModeration",
-            "type": "Moderation",
-            "optional": true,
-            "list": true,
-            "id": "conversationalRetrievalQAChain_0-input-inputModeration-Moderation"
-          }
-        ],
-        "inputs": {
-          "model": "{{chatOpenAI_0.data.instance}}",
-          "vectorStoreRetriever": "{{pinecone_0.data.instance}}",
-          "memory": "{{MongoDBAtlasChatMemory_0.data.instance}}",
-          "returnSourceDocuments": "",
-          "rephrasePrompt": "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {question}\nStandalone Question:",
-          "responsePrompt": "I want you to act as a document that I am having a conversation with. Your name is \"AI Assistant\". Using the provided context, answer the user's question to the best of your ability using the resources provided .\nIf there is nothing in the context relevant to the question at hand you will ask that you like to book a tour if reply yes than you will get name , email , residential address and phone number , if reply no than you switched to context provided , if information is provided than show information and say \"Your travel booked GoodBye\" . Never break character.\n------------\n{context}\n------------\nREMEMBER: If there is no relevant information within the context or if user not like to travel , just say \"GoodBye , Thank you for using our services\". Don't try to make up an answer. Never break character.",
-          "inputModeration": ""
-        },
-        "outputAnchors": [
-          {
-            "id": "conversationalRetrievalQAChain_0-output-conversationalRetrievalQAChain-ConversationalRetrievalQAChain|BaseChain|Runnable",
-            "name": "conversationalRetrievalQAChain",
-            "label": "ConversationalRetrievalQAChain",
-            "description": "Document QA - built on RetrievalQAChain to provide a chat history component",
-            "type": "ConversationalRetrievalQAChain | BaseChain | Runnable"
-          }
-        ],
-        "outputs": {},
-        "selected": false
-      },
-      "width": 300,
-      "height": 530,
-      "selected": false,
-      "positionAbsolute": {
-        "x": 1120.2524799999999,
-        "y": 60.38919999999996
+        "x": -87.28577324261897,
+        "y": -333.48415952646326
       },
       "dragging": false
     },
     {
       "id": "cheerioWebScraper_0",
       "position": {
-        "x": -95.37619427762752,
-        "y": 110.70172615687989
+        "x": -485.1666839104936,
+        "y": 236.50384136463958
       },
       "type": "customNode",
       "data": {
@@ -543,16 +429,16 @@
       "height": 425,
       "selected": false,
       "positionAbsolute": {
-        "x": -95.37619427762752,
-        "y": 110.70172615687989
+        "x": -485.1666839104936,
+        "y": 236.50384136463958
       },
       "dragging": false
     },
     {
       "id": "recursiveCharacterTextSplitter_0",
       "position": {
-        "x": -435.8380026169525,
-        "y": 110.67192041485308
+        "x": -890.2332221249158,
+        "y": 17.899167113694233
       },
       "type": "customNode",
       "data": {
@@ -622,16 +508,16 @@
       "height": 429,
       "selected": false,
       "positionAbsolute": {
-        "x": -435.8380026169525,
-        "y": 110.67192041485308
+        "x": -890.2332221249158,
+        "y": 17.899167113694233
       },
       "dragging": false
     },
     {
       "id": "pinecone_0",
       "position": {
-        "x": 248.62142687052125,
-        "y": 598.1735744591822
+        "x": -86.02254153587523,
+        "y": 342.6362219743509
       },
       "type": "customNode",
       "data": {
@@ -800,19 +686,19 @@
         "selected": false
       },
       "width": 300,
-      "height": 604,
+      "height": 605,
       "selected": false,
       "positionAbsolute": {
-        "x": 248.62142687052125,
-        "y": 598.1735744591822
+        "x": -86.02254153587523,
+        "y": 342.6362219743509
       },
       "dragging": false
     },
     {
       "id": "pdfFile_0",
       "position": {
-        "x": -550.7863510601912,
-        "y": 619.1799102296242
+        "x": -484.71512126147707,
+        "y": -379.2820421055883
       },
       "type": "customNode",
       "data": {
@@ -909,19 +795,19 @@
         "selected": false
       },
       "width": 300,
-      "height": 507,
+      "height": 508,
       "selected": false,
       "positionAbsolute": {
-        "x": -550.7863510601912,
-        "y": 619.1799102296242
+        "x": -484.71512126147707,
+        "y": -379.2820421055883
       },
       "dragging": false
     },
     {
       "id": "MongoDBAtlasChatMemory_0",
       "position": {
-        "x": 1049.2079345268596,
-        "y": 608.9450058361282
+        "x": 661.429468410409,
+        "y": 513.3582191659649
       },
       "type": "customNode",
       "data": {
@@ -1000,24 +886,395 @@
         "selected": false
       },
       "width": 300,
-      "height": 524,
+      "height": 525,
       "selected": false,
       "positionAbsolute": {
-        "x": 1049.2079345268596,
-        "y": 608.9450058361282
+        "x": 661.429468410409,
+        "y": 513.3582191659649
+      },
+      "dragging": false
+    },
+    {
+      "id": "inputModerationOpenAI_0",
+      "position": {
+        "x": 245.1473564223117,
+        "y": -334.047779825911
+      },
+      "type": "customNode",
+      "data": {
+        "id": "inputModerationOpenAI_0",
+        "label": "OpenAI Moderation",
+        "version": 1,
+        "name": "inputModerationOpenAI",
+        "type": "Moderation",
+        "baseClasses": [
+          "Moderation"
+        ],
+        "category": "Moderation",
+        "description": "Check whether content complies with OpenAI usage policies.",
+        "inputParams": [
+          {
+            "label": "Connect Credential",
+            "name": "credential",
+            "type": "credential",
+            "credentialNames": [
+              "openAIApi"
+            ],
+            "id": "inputModerationOpenAI_0-input-credential-credential"
+          },
+          {
+            "label": "Error Message",
+            "name": "moderationErrorMessage",
+            "type": "string",
+            "rows": 2,
+            "default": "Cannot Process! Input violates OpenAI's content moderation policies.",
+            "optional": true,
+            "id": "inputModerationOpenAI_0-input-moderationErrorMessage-string"
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "moderationErrorMessage": "Cannot Process! Input violates OpenAI's content moderation policies."
+        },
+        "outputAnchors": [
+          {
+            "id": "inputModerationOpenAI_0-output-inputModerationOpenAI-Moderation",
+            "name": "inputModerationOpenAI",
+            "label": "Moderation",
+            "description": "Check whether content complies with OpenAI usage policies.",
+            "type": "Moderation"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 452,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 245.1473564223117,
+        "y": -334.047779825911
+      }
+    },
+    {
+      "id": "conversationalAgent_0",
+      "position": {
+        "x": 989.1756308040583,
+        "y": 201.87069378107043
+      },
+      "type": "customNode",
+      "data": {
+        "id": "conversationalAgent_0",
+        "label": "Conversational Agent",
+        "version": 3,
+        "name": "conversationalAgent",
+        "type": "AgentExecutor",
+        "baseClasses": [
+          "AgentExecutor",
+          "BaseChain",
+          "Runnable"
+        ],
+        "category": "Agents",
+        "description": "Conversational agent for a chat model. It will utilize chat specific prompts",
+        "inputParams": [
+          {
+            "label": "System Message",
+            "name": "systemMessage",
+            "type": "string",
+            "rows": 4,
+            "default": "Assistant is a large language model trained by OpenAI.\n\nAssistant is designed to be able to assist with a wide range of tasks, from answering simple questions to providing in-depth explanations and discussions on a wide range of topics. As a language model, Assistant is able to generate human-like text based on the input it receives, allowing it to engage in natural-sounding conversations and provide responses that are coherent and relevant to the topic at hand.\n\nAssistant is constantly learning and improving, and its capabilities are constantly evolving. It is able to process and understand large amounts of text, and can use this knowledge to provide accurate and informative responses to a wide range of questions. Additionally, Assistant is able to generate its own text based on the input it receives, allowing it to engage in discussions and provide explanations and descriptions on a wide range of topics.\n\nOverall, Assistant is a powerful system that can help with a wide range of tasks and provide valuable insights and information on a wide range of topics. Whether you need help with a specific question or just want to have a conversation about a particular topic, Assistant is here to assist.",
+            "optional": true,
+            "additionalParams": true,
+            "id": "conversationalAgent_0-input-systemMessage-string"
+          },
+          {
+            "label": "Max Iterations",
+            "name": "maxIterations",
+            "type": "number",
+            "optional": true,
+            "additionalParams": true,
+            "id": "conversationalAgent_0-input-maxIterations-number"
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Allowed Tools",
+            "name": "tools",
+            "type": "Tool",
+            "list": true,
+            "id": "conversationalAgent_0-input-tools-Tool"
+          },
+          {
+            "label": "Chat Model",
+            "name": "model",
+            "type": "BaseChatModel",
+            "id": "conversationalAgent_0-input-model-BaseChatModel"
+          },
+          {
+            "label": "Memory",
+            "name": "memory",
+            "type": "BaseChatMemory",
+            "id": "conversationalAgent_0-input-memory-BaseChatMemory"
+          },
+          {
+            "label": "Input Moderation",
+            "description": "Detect text that could generate harmful output and prevent it from being sent to the language model",
+            "name": "inputModeration",
+            "type": "Moderation",
+            "optional": true,
+            "list": true,
+            "id": "conversationalAgent_0-input-inputModeration-Moderation"
+          }
+        ],
+        "inputs": {
+          "tools": [
+            "{{customTool_0.data.instance}}",
+            "{{retrieverTool_0.data.instance}}"
+          ],
+          "model": "{{chatOpenAI_0.data.instance}}",
+          "memory": "{{MongoDBAtlasChatMemory_0.data.instance}}",
+          "systemMessage": "Assistant is a large language model trained by OpenAI.\n\nAssistant is designed to be able to assist with a wide range of tasks, from answering simple questions to providing in-depth explanations and discussions on a wide range of topics. As a language model, Assistant is able to generate human-like text based on the input it receives, allowing it to engage in natural-sounding conversations and provide responses that are coherent and relevant to the topic at hand.\n\nAssistant is constantly learning and improving, and its capabilities are constantly evolving. It is able to process and understand large amounts of text, and can use this knowledge to provide accurate and informative responses to a wide range of questions. Additionally, Assistant is able to generate its own text based on the input it receives, allowing it to engage in discussions and provide explanations and descriptions on a wide range of topics.\n\nOverall, Assistant is a powerful system that can help with a wide range of tasks and provide valuable insights and information on a wide range of topics. Whether you need help with a specific question or just want to have a conversation about a particular topic, Assistant is here to assist.\n\n I want you to act as an AI assistant that I am having a conversation with. Your name is \"AI Assistant\". Using the provided context, answer the user's question to the best of your ability using the resources provided.\n\nIf there is nothing in the context relevant to the question at hand then ask to user that he want to book tour from zeb travels or not if user want to book a tour than collect: name, email, residential address, phone number, and cityOfDeparture.\nGenerate a unique six-digit ID for the user.\n\n- If no, switch to the provided context.\n- If information is provided show the information and six-digit ID to the user and say `$Name $Email $phoneNumber $residentialAddress $cityOfDeparture Your travel is booked; our service partner will contact you soon...` \n\nREMEMBER: Only this variables  $Name $Email $phoneNumber $residentialAddress $cityOfDeparture are save on memory . If there is no relevant information within the context or if the user does not wish to travel, just say \"Goodbye, Thank you for using our services\". Don't try to make up an answer. Never break character.",
+          "inputModeration": [
+            "{{inputModerationOpenAI_0.data.instance}}"
+          ],
+          "maxIterations": "10"
+        },
+        "outputAnchors": [
+          {
+            "id": "conversationalAgent_0-output-conversationalAgent-AgentExecutor|BaseChain|Runnable",
+            "name": "conversationalAgent",
+            "label": "AgentExecutor",
+            "description": "Conversational agent for a chat model. It will utilize chat specific prompts",
+            "type": "AgentExecutor | BaseChain | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 434,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 989.1756308040583,
+        "y": 201.87069378107043
+      },
+      "dragging": false
+    },
+    {
+      "id": "customTool_0",
+      "position": {
+        "x": 244.03670818595486,
+        "y": 341.931794872468
+      },
+      "type": "customNode",
+      "data": {
+        "id": "customTool_0",
+        "label": "Custom Tool",
+        "version": 1,
+        "name": "customTool",
+        "type": "CustomTool",
+        "baseClasses": [
+          "CustomTool",
+          "Tool",
+          "StructuredTool",
+          "Runnable"
+        ],
+        "category": "Tools",
+        "description": "Use custom tool you've created in Flowise within chatflow",
+        "inputParams": [
+          {
+            "label": "Select Tool",
+            "name": "selectedTool",
+            "type": "asyncOptions",
+            "loadMethod": "listTools",
+            "id": "customTool_0-input-selectedTool-asyncOptions"
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "selectedTool": "c655dec0-875c-4cd6-8084-511fa0f8f043"
+        },
+        "outputAnchors": [
+          {
+            "id": "customTool_0-output-customTool-CustomTool|Tool|StructuredTool|Runnable",
+            "name": "customTool",
+            "label": "CustomTool",
+            "description": "Use custom tool you've created in Flowise within chatflow",
+            "type": "CustomTool | Tool | StructuredTool | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 285,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 244.03670818595486,
+        "y": 341.931794872468
+      },
+      "dragging": false
+    },
+    {
+      "id": "bufferWindowMemory_0",
+      "position": {
+        "x": 1491.797132392005,
+        "y": 13.144573138568404
+      },
+      "type": "customNode",
+      "data": {
+        "id": "bufferWindowMemory_0",
+        "label": "Buffer Window Memory",
+        "version": 2,
+        "name": "bufferWindowMemory",
+        "type": "BufferWindowMemory",
+        "baseClasses": [
+          "BufferWindowMemory",
+          "BaseChatMemory",
+          "BaseMemory"
+        ],
+        "category": "Memory",
+        "description": "Uses a window of size k to surface the last k back-and-forth to use as memory",
+        "inputParams": [
+          {
+            "label": "Size",
+            "name": "k",
+            "type": "number",
+            "default": "4",
+            "description": "Window of size k to surface the last k back-and-forth to use as memory.",
+            "id": "bufferWindowMemory_0-input-k-number"
+          },
+          {
+            "label": "Session Id",
+            "name": "sessionId",
+            "type": "string",
+            "description": "If not specified, a random id will be used. Learn <a target=\"_blank\" href=\"https://docs.flowiseai.com/memory#ui-and-embedded-chat\">more</a>",
+            "default": "",
+            "optional": true,
+            "additionalParams": true,
+            "id": "bufferWindowMemory_0-input-sessionId-string"
+          },
+          {
+            "label": "Memory Key",
+            "name": "memoryKey",
+            "type": "string",
+            "default": "chat_history",
+            "additionalParams": true,
+            "id": "bufferWindowMemory_0-input-memoryKey-string"
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "k": "4",
+          "sessionId": "",
+          "memoryKey": "chat_history"
+        },
+        "outputAnchors": [
+          {
+            "id": "bufferWindowMemory_0-output-bufferWindowMemory-BufferWindowMemory|BaseChatMemory|BaseMemory",
+            "name": "bufferWindowMemory",
+            "label": "BufferWindowMemory",
+            "description": "Uses a window of size k to surface the last k back-and-forth to use as memory",
+            "type": "BufferWindowMemory | BaseChatMemory | BaseMemory"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 330,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1491.797132392005,
+        "y": 13.144573138568404
+      },
+      "dragging": false
+    },
+    {
+      "id": "retrieverTool_0",
+      "position": {
+        "x": 621.9441727573395,
+        "y": -376.83813534677364
+      },
+      "type": "customNode",
+      "data": {
+        "id": "retrieverTool_0",
+        "label": "Retriever Tool",
+        "version": 2,
+        "name": "retrieverTool",
+        "type": "RetrieverTool",
+        "baseClasses": [
+          "RetrieverTool",
+          "DynamicTool",
+          "Tool",
+          "StructuredTool",
+          "Runnable"
+        ],
+        "category": "Tools",
+        "description": "Use a retriever as allowed tool for agent",
+        "inputParams": [
+          {
+            "label": "Retriever Name",
+            "name": "name",
+            "type": "string",
+            "placeholder": "search_state_of_union",
+            "id": "retrieverTool_0-input-name-string"
+          },
+          {
+            "label": "Retriever Description",
+            "name": "description",
+            "type": "string",
+            "description": "When should agent uses to retrieve documents",
+            "rows": 3,
+            "placeholder": "Searches and returns documents regarding the state-of-the-union.",
+            "id": "retrieverTool_0-input-description-string"
+          },
+          {
+            "label": "Return Source Documents",
+            "name": "returnSourceDocuments",
+            "type": "boolean",
+            "optional": true,
+            "id": "retrieverTool_0-input-returnSourceDocuments-boolean"
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Retriever",
+            "name": "retriever",
+            "type": "BaseRetriever",
+            "id": "retrieverTool_0-input-retriever-BaseRetriever"
+          }
+        ],
+        "inputs": {
+          "name": "Pinecone_Retriver",
+          "description": "Retrive the pinecone data",
+          "retriever": "{{pinecone_0.data.instance}}",
+          "returnSourceDocuments": ""
+        },
+        "outputAnchors": [
+          {
+            "id": "retrieverTool_0-output-retrieverTool-RetrieverTool|DynamicTool|Tool|StructuredTool|Runnable",
+            "name": "retrieverTool",
+            "label": "RetrieverTool",
+            "description": "Use a retriever as allowed tool for agent",
+            "type": "RetrieverTool | DynamicTool | Tool | StructuredTool | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 602,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 621.9441727573395,
+        "y": -376.83813534677364
       },
       "dragging": false
     }
   ],
   "edges": [
-    {
-      "source": "chatOpenAI_0",
-      "sourceHandle": "chatOpenAI_0-output-chatOpenAI-ChatOpenAI|BaseChatModel|BaseLanguageModel|Runnable",
-      "target": "conversationalRetrievalQAChain_0",
-      "targetHandle": "conversationalRetrievalQAChain_0-input-model-BaseChatModel",
-      "type": "buttonedge",
-      "id": "chatOpenAI_0-chatOpenAI_0-output-chatOpenAI-ChatOpenAI|BaseChatModel|BaseLanguageModel|Runnable-conversationalRetrievalQAChain_0-conversationalRetrievalQAChain_0-input-model-BaseChatModel"
-    },
     {
       "source": "recursiveCharacterTextSplitter_0",
       "sourceHandle": "recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
@@ -1059,20 +1316,52 @@
       "id": "openAIEmbeddings_0-openAIEmbeddings_0-output-openAIEmbeddings-OpenAIEmbeddings|Embeddings-pinecone_0-pinecone_0-input-embeddings-Embeddings"
     },
     {
+      "source": "customTool_0",
+      "sourceHandle": "customTool_0-output-customTool-CustomTool|Tool|StructuredTool|Runnable",
+      "target": "conversationalAgent_0",
+      "targetHandle": "conversationalAgent_0-input-tools-Tool",
+      "type": "buttonedge",
+      "id": "customTool_0-customTool_0-output-customTool-CustomTool|Tool|StructuredTool|Runnable-conversationalAgent_0-conversationalAgent_0-input-tools-Tool"
+    },
+    {
+      "source": "inputModerationOpenAI_0",
+      "sourceHandle": "inputModerationOpenAI_0-output-inputModerationOpenAI-Moderation",
+      "target": "conversationalAgent_0",
+      "targetHandle": "conversationalAgent_0-input-inputModeration-Moderation",
+      "type": "buttonedge",
+      "id": "inputModerationOpenAI_0-inputModerationOpenAI_0-output-inputModerationOpenAI-Moderation-conversationalAgent_0-conversationalAgent_0-input-inputModeration-Moderation"
+    },
+    {
+      "source": "chatOpenAI_0",
+      "sourceHandle": "chatOpenAI_0-output-chatOpenAI-ChatOpenAI|BaseChatModel|BaseLanguageModel|Runnable",
+      "target": "conversationalAgent_0",
+      "targetHandle": "conversationalAgent_0-input-model-BaseChatModel",
+      "type": "buttonedge",
+      "id": "chatOpenAI_0-chatOpenAI_0-output-chatOpenAI-ChatOpenAI|BaseChatModel|BaseLanguageModel|Runnable-conversationalAgent_0-conversationalAgent_0-input-model-BaseChatModel"
+    },
+    {
       "source": "pinecone_0",
       "sourceHandle": "pinecone_0-output-retriever-Pinecone|VectorStoreRetriever|BaseRetriever",
-      "target": "conversationalRetrievalQAChain_0",
-      "targetHandle": "conversationalRetrievalQAChain_0-input-vectorStoreRetriever-BaseRetriever",
+      "target": "retrieverTool_0",
+      "targetHandle": "retrieverTool_0-input-retriever-BaseRetriever",
       "type": "buttonedge",
-      "id": "pinecone_0-pinecone_0-output-retriever-Pinecone|VectorStoreRetriever|BaseRetriever-conversationalRetrievalQAChain_0-conversationalRetrievalQAChain_0-input-vectorStoreRetriever-BaseRetriever"
+      "id": "pinecone_0-pinecone_0-output-retriever-Pinecone|VectorStoreRetriever|BaseRetriever-retrieverTool_0-retrieverTool_0-input-retriever-BaseRetriever"
+    },
+    {
+      "source": "retrieverTool_0",
+      "sourceHandle": "retrieverTool_0-output-retrieverTool-RetrieverTool|DynamicTool|Tool|StructuredTool|Runnable",
+      "target": "conversationalAgent_0",
+      "targetHandle": "conversationalAgent_0-input-tools-Tool",
+      "type": "buttonedge",
+      "id": "retrieverTool_0-retrieverTool_0-output-retrieverTool-RetrieverTool|DynamicTool|Tool|StructuredTool|Runnable-conversationalAgent_0-conversationalAgent_0-input-tools-Tool"
     },
     {
       "source": "MongoDBAtlasChatMemory_0",
       "sourceHandle": "MongoDBAtlasChatMemory_0-output-MongoDBAtlasChatMemory-MongoDBAtlasChatMemory|BaseChatMemory|BaseMemory",
-      "target": "conversationalRetrievalQAChain_0",
-      "targetHandle": "conversationalRetrievalQAChain_0-input-memory-BaseMemory",
+      "target": "conversationalAgent_0",
+      "targetHandle": "conversationalAgent_0-input-memory-BaseChatMemory",
       "type": "buttonedge",
-      "id": "MongoDBAtlasChatMemory_0-MongoDBAtlasChatMemory_0-output-MongoDBAtlasChatMemory-MongoDBAtlasChatMemory|BaseChatMemory|BaseMemory-conversationalRetrievalQAChain_0-conversationalRetrievalQAChain_0-input-memory-BaseMemory"
+      "id": "MongoDBAtlasChatMemory_0-MongoDBAtlasChatMemory_0-output-MongoDBAtlasChatMemory-MongoDBAtlasChatMemory|BaseChatMemory|BaseMemory-conversationalAgent_0-conversationalAgent_0-input-memory-BaseChatMemory"
     }
   ]
 }

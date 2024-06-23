@@ -25,7 +25,7 @@
   },
   "defaultTimezone": "Asia/Yekaterinburg",
   "webhook": {
-    "url": "https://bcdf-203-101-187-89.ngrok-free.app/webhook",
+    "url": "https://379a-203-101-187-89.ngrok-free.app/webhook",
     "username": "",
     "headers": {},
     "available": true,
@@ -37,12 +37,14 @@
   "mlMinConfidence": 0.3,
   "supportedLanguages": [],
   "enableOnePlatformApi": true,
-  "onePlatformApiVersion": "v2",
+  "onePlatformApiVersion": "v2beta1",
   "secondaryKey": "0a439b20a769479cb7f1ed73c7cfe6e7",
   "analyzeQueryTextSentiment": false,
-  "enabledKnowledgeBaseNames": [],
+  "enabledKnowledgeBaseNames": [
+    "projects/travelhandler-gqpq/knowledgeBases/MTE5NjUzNzUwOTEwMTA2OTkyNjU"
+  ],
   "knowledgeServiceConfidenceAdjustment": 0.0,
   "dialogBuilderMode": false,
   "baseActionPackagesUrl": "",
-  "enableSpellCorrection": false
+  "enableSpellCorrection": true
 }

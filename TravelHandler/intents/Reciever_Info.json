@@ -1,0 +1,58 @@
+{
+  "id": "0410a2cc-f3d1-4433-86f4-2d571cf925f4",
+  "name": "Reciever_Info",
+  "auto": true,
+  "contexts": [
+    "Receiver-info"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "313995b3-c53d-4723-a9c4-745d7981bf5a",
+          "name": "InfoContext",
+          "required": false,
+          "dataType": "@InfoContext",
+          "value": "$InfoContext",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Zeb Established 50 years ago",
+            "Zeb Travels is one of Pakistan’s largest tour sellers and specialises in organising tours tailored to the specific interest",
+            "Zeb\nKhawaja Jahan Zeb\nCEO",
+            "Having worked in this field since a very young age, I developed an early love for traveling and everything related to tourism that the message of CEO",
+            "I was especially interested in exploring my own country, Pakistan, which offers an amazing variety of superb holiday destinations  that the message of CEO",
+            "During my extensive travels over the years in Pakistan, I believed I had visited every corner of this country, but to my surprise, on each new journey, I discovered a part of my country that I had never experienced before that the message of CEO",
+            "I believe we can achieve this vision. Join me on this exciting journey that I like to call TRAVELLING...that the message of CEO"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
